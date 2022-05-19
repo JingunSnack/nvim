@@ -67,7 +67,7 @@ return packer.startup(function(use)
   use "nvim-telescope/telescope.nvim"
 
   -- Treesitter
-  use { "nvim-treesitter/nvim-treesitter", run=":TSUpdate" }
+  use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
 
   -- Nvim-tree
   use "kyazdani42/nvim-web-devicons"
@@ -82,4 +82,3 @@ return packer.startup(function(use)
     require("packer").sync()
   end
 end)
-
