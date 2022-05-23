@@ -75,3 +75,6 @@ keymap("n", "<C-t>", "<cmd>Telescope live_grep<CR>", opts)
 
 -- black for Python
 keymap("n", "<leader>b", "<cmd>!black %<CR>", opts)
+
+-- ToggleTerm
+keymap("n", "<leader>t", "<cmd>ToggleTerm dir='%:p:h' direction=float<CR>", opts)
