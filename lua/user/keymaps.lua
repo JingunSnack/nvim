@@ -72,3 +72,6 @@ keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 -- Telescope
 keymap("n", "<leader>f", "<cmd>Telescope find_files<CR>", opts)
 keymap("n", "<C-t>", "<cmd>Telescope live_grep<CR>", opts)
+
+-- black for Python
+keymap("n", "<leader>b", "<cmd>!black %<CR>", opts)
