@@ -62,29 +62,33 @@ return packer.startup(function(use)
   use "neovim/nvim-lspconfig" -- enable LSP
   use "williamboman/nvim-lsp-installer" -- simple to use language server installer
 
-  -- Telescope
+  -- Telescope (fuzz search)
   use "nvim-lua/plenary.nvim"
   use "nvim-telescope/telescope.nvim"
 
-  -- Treesitter
+  -- Treesitter (language parser + syntax highlighting)
   use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
 
-  -- Nvim-tree
+  -- Nvim-tree (left sidebar)
   use "kyazdani42/nvim-web-devicons"
   use "kyazdani42/nvim-tree.lua"
 
-  -- Comment
+  -- Comment (gcc in normal mode / gc in visual mode)
   use "numToStr/Comment.nvim"
 
+  -- ToggleTerm
   use { "akinsho/toggleterm.nvim", tag = "v1.*" }
 
+  -- Tabs
   use { "akinsho/bufferline.nvim", tag = "v2.*", requires = "kyazdani42/nvim-web-devicons" }
 
+  -- Statusline (bottom bar)
   use {
     "nvim-lualine/lualine.nvim",
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   }
 
+  -- Git (try :Gitsigns <function>)
   use "lewis6991/gitsigns.nvim"
 
   -- Automatically set up your configuration after cloning packer.nvim
