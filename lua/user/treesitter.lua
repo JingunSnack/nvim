@@ -4,12 +4,10 @@ if not status_ok then
 end
 
 configs.setup {
-  ensure_installed = "all",
+  ensure_installed = {"rust", "lua", "python"},
   sync_install = false,
-  ignore_install = { "" },
   highlight = {
     enable = true,
-    disbale = { "" },
     additional_vim_regex_highlighting = true,
   },
   indent = {
