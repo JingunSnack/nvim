@@ -3,4 +3,13 @@ if not status_ok then
   return
 end
 
-lualine.setup {}
+lualine.setup {
+  sections = {
+    lualine_a = {
+      {
+        'filename',
+        path = 1
+      }
+    }
+  }
+}
