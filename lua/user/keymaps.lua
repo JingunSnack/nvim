@@ -73,11 +73,6 @@ keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 keymap("n", "<leader>f", "<cmd>Telescope find_files<CR>", opts)
 keymap("n", "<C-t>", "<cmd>Telescope live_grep<CR>", opts)
 
--- black for Python
-keymap("n", "<leader>b", "<cmd>!pdm run black % <CR>", opts)
--- isort for Python
-keymap("n", "<leader>i", "<cmd>!isort % <CR>", opts)
-
 -- cargo check for Rust
 keymap("n", "<leader>c", "<cmd>!cargo check <CR>", opts)
 
