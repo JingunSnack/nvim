@@ -30,7 +30,6 @@ lsp_installer.on_server_ready(function(server)
     local rustopts = {
       tools = {
         autoSetHints = true,
-        hover_with_actions = false,
         inlay_hints = {
           show_parameter_hints = true,
           parameter_hints_prefix = "",
@@ -40,13 +39,16 @@ lsp_installer.on_server_ready(function(server)
       server = vim.tbl_deep_extend("force", server:get_default_options(), opts, {
         settings = {
           ["rust-analyzer"] = {
+            checkOnSave = {
+              command = "clippy"
+            },
             completion = {
+              callable = {
+                snippets = "fill_arguments"
+              },
               postfix = {
                 enable = false
               }
-            },
-            checkOnSave = {
-              command = "clippy"
             },
           }
         }

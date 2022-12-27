@@ -10,7 +10,7 @@ keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
--- Modes
+-- Modes:
 --   normal_mode = "n",
 --   insert_mode = "i",
 --   visual_mode = "v",
@@ -75,6 +75,9 @@ keymap("n", "<C-t>", "<cmd>Telescope live_grep<CR>", opts)
 
 -- cargo check for Rust
 keymap("n", "<leader>c", "<cmd>!cargo check <CR>", opts)
+
+-- black for Python
+keymap("n", "<leader>b", "<cmd>!black % <CR>", opts)
 
 -- ToggleTerm
 keymap("n", "<leader>t", "<cmd>ToggleTerm dir='%:p:h' direction=float<CR>", opts)

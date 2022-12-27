@@ -43,7 +43,6 @@ return packer.startup(function(use)
   use "wbthomason/packer.nvim"
 
   -- theme
-  -- use "projekt0n/github-nvim-theme"
   use { "catppuccin/nvim", as = "catppuccin" }
 
   -- cmp plugins
@@ -61,8 +60,10 @@ return packer.startup(function(use)
 
   -- LSP
   use "neovim/nvim-lspconfig" -- enable LSP
-  use "williamboman/nvim-lsp-installer" -- simple to use language server installer
+  -- use "williamboman/nvim-lsp-installer" -- simple to use language server installer
   use "simrat39/rust-tools.nvim"
+  use "williamboman/mason.nvim"
+  use "williamboman/mason-lspconfig.nvim"
 
   -- Telescope (fuzz search)
   use "nvim-lua/plenary.nvim"
@@ -92,6 +93,9 @@ return packer.startup(function(use)
 
   -- Git (try :Gitsigns <function>)
   use "lewis6991/gitsigns.nvim"
+
+  -- Black for formatting python code
+  use "averms/black-nvim"
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

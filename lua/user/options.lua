@@ -32,7 +32,7 @@ local options = {
   wrap = false, -- display lines as one long line
   scrolloff = 8, -- is one of my fav
   sidescrolloff = 8,
-  guifont = "CaskaydiaCove NF:h17", -- the font used in graphical neovim applications
+  guifont = "CaskaydiaCove NF:h14", -- the font used in graphical neovim applications
 }
 
 vim.opt.shortmess:append "c"
@@ -45,5 +45,5 @@ vim.cmd "set whichwrap+=<,>,[,],h,l"
 vim.cmd [[set iskeyword+=-]]
 
 -- format on save with timeout (rust and lua only)
-vim.cmd [[autocmd BufWritePre *.lua lua vim.lsp.buf.formatting_sync(nil, 5000)]]
-vim.cmd [[autocmd BufWritePre *.rs lua vim.lsp.buf.formatting_sync(nil, 5000)]]
+vim.cmd [[autocmd BufWritePre *.lua lua vim.lsp.buf.format()]]
+vim.cmd [[autocmd BufWritePre *.rs lua vim.lsp.buf.format()]]

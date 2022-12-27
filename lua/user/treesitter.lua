@@ -4,7 +4,7 @@ if not status_ok then
 end
 
 configs.setup {
-  ensure_installed = { "rust", "lua", "python" },
+  ensure_installed = { "rust", "lua", "python", "wgsl" },
   sync_install = false,
   highlight = {
     enable = true,
@@ -18,4 +18,15 @@ configs.setup {
     enable = true,
     enable_autocmd = false,
   }
+}
+
+-- syntax highlight for wgsl files
+vim.cmd [[au BufRead,BufNewFile *.wgsl	set filetype=wgsl]]
+
+local parser_config = require "nvim-treesitter.parsers".get_parser_configs()
+parser_config.wgsl = {
+  install_info = {
+    url = "https://github.com/szebniok/tree-sitter-wgsl",
+    files = { "src/parser.c" }
+  },
 }
