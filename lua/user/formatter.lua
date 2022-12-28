@@ -53,6 +53,16 @@ require("formatter").setup({
 			end,
 		},
 
+		rust = {
+			require("formatter.filetypes.rust").rustfmt,
+			function()
+				return {
+					exe = "rustfmt",
+					stdin = true,
+				}
+			end,
+		},
+
 		-- Use the special "*" filetype for defining formatter configurations on
 		-- any filetype
 		["*"] = {

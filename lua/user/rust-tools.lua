@@ -10,6 +10,7 @@ rt.setup({
 		end,
 		settings = {
 			["rust-analyzer"] = {
+				checkOnSave = { command = "clippy" },
 				inlayHints = { locationLinks = false },
 			},
 		},
