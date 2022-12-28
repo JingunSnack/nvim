@@ -39,6 +39,20 @@ require("formatter").setup({
 			end,
 		},
 
+		python = {
+			require("formatter.filetypes.python").black,
+			function()
+				return {
+					exe = "black",
+					args = {
+						"--line-length=79",
+						"-",
+					},
+					stdin = true,
+				}
+			end,
+		},
+
 		-- Use the special "*" filetype for defining formatter configurations on
 		-- any filetype
 		["*"] = {
