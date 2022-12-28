@@ -81,3 +81,5 @@ keymap("n", "<leader>b", "<cmd>!black % <CR>", opts)
 
 -- ToggleTerm
 keymap("n", "<leader>t", "<cmd>ToggleTerm dir='%:p:h' direction=float<CR>", opts)
+
+keymap("n", "<leader>f", ":Format<CR>", opts)
