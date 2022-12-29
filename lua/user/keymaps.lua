@@ -73,13 +73,5 @@ keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 keymap("n", "<leader>f", "<cmd>Telescope find_files<CR>", opts)
 keymap("n", "<C-t>", "<cmd>Telescope live_grep<CR>", opts)
 
--- cargo check for Rust
-keymap("n", "<leader>c", "<cmd>!cargo check <CR>", opts)
-
--- black for Python
-keymap("n", "<leader>b", "<cmd>!black % <CR>", opts)
-
 -- ToggleTerm
 keymap("n", "<leader>t", "<cmd>ToggleTerm dir='%:p:h' direction=float<CR>", opts)
-
-keymap("n", "<leader>f", ":Format<CR>", opts)
