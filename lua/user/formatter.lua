@@ -58,8 +58,23 @@ require("formatter").setup({
 			function()
 				return {
 					exe = "rustfmt",
+					args = { "--edition 2021" },
 					stdin = true,
 				}
+			end,
+		},
+
+		javascript = {
+			require("formatter.filetypes.javascript").eslint_d,
+			function()
+				return {}
+			end,
+		},
+
+		svelte = {
+			require("formatter.filetypes.svelte").prettier,
+			function()
+				return {}
 			end,
 		},
 

@@ -4,7 +4,7 @@ if not status_ok then
 end
 
 configs.setup({
-	ensure_installed = { "rust", "lua", "python", "wgsl" },
+	ensure_installed = { "rust", "lua", "python", "wgsl", "javascript", "svelte" },
 	sync_install = false,
 	highlight = {
 		enable = true,
