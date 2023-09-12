@@ -81,10 +81,10 @@ return packer.startup(function(use)
 	use("numToStr/Comment.nvim")
 
 	-- ToggleTerm
-	use({ "akinsho/toggleterm.nvim", tag = "v1.*" })
+	use({ "akinsho/toggleterm.nvim", tag = "*" })
 
 	-- Tabs
-	use({ "akinsho/bufferline.nvim", tag = "v2.*", requires = "kyazdani42/nvim-web-devicons" })
+	use({ "akinsho/bufferline.nvim", tag = "*", requires = "kyazdani42/nvim-web-devicons" })
 
 	-- Statusline (bottom bar)
 	use({

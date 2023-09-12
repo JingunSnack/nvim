@@ -1,6 +1,17 @@
 require("mason-lspconfig").setup()
 
-require("lspconfig").pylsp.setup({})
+require("lspconfig").pylsp.setup({
+	settings = {
+		pylsp = {
+			plugins = {
+				pycodestyle = {
+					ignore = { "E203", "W503" },
+					maxLineLength = 100,
+				},
+			},
+		},
+	},
+})
 
 require("lspconfig").eslint.setup({
 	filetypes = {
