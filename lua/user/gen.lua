@@ -3,8 +3,6 @@ if not status_ok then
 	return
 end
 
-gen.model = "codellama:7b-python"
-
 gen.prompts["Elaborate_Text"] = {
 	prompt = "Elaborate the following text:\n$text",
 	replace = true,
