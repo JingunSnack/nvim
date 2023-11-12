@@ -98,6 +98,9 @@ return packer.startup(function(use)
 	-- Black for formatting python code
 	use("averms/black-nvim")
 
+	-- Generate text using LLM
+	use("David-Kunz/gen.nvim")
+
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then

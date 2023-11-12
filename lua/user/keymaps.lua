@@ -72,3 +72,8 @@ keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 -- Telescope
 keymap("n", "<leader>f", "<cmd>Telescope find_files<CR>", opts)
 keymap("n", "<C-t>", "<cmd>Telescope live_grep<CR>", opts)
+
+-- Gen
+keymap("v", "<leader>x", ":Gen Fix_Code<CR>", opts)
+keymap("v", "<leader>r", ":Gen Review_Code<CR>", opts)
+keymap("v", "<leader>h", ":Gen Enhance_Code<CR>", opts)
