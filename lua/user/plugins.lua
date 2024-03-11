@@ -74,8 +74,8 @@ return packer.startup(function(use)
 	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
 
 	-- Nvim-tree (left sidebar)
-	use("kyazdani42/nvim-web-devicons")
-	use("kyazdani42/nvim-tree.lua")
+	use("nvim-tree/nvim-web-devicons")
+	use("nvim-tree/nvim-tree.lua")
 
 	-- Comment (gcc in normal mode / gc in visual mode)
 	use("numToStr/Comment.nvim")
@@ -84,12 +84,12 @@ return packer.startup(function(use)
 	use({ "akinsho/toggleterm.nvim", tag = "*" })
 
 	-- Tabs
-	use({ "akinsho/bufferline.nvim", tag = "*", requires = "kyazdani42/nvim-web-devicons" })
+	use({ "akinsho/bufferline.nvim", tag = "*", requires = "nvim-tree/nvim-web-devicons" })
 
 	-- Statusline (bottom bar)
 	use({
 		"nvim-lualine/lualine.nvim",
-		requires = { "kyazdani42/nvim-web-devicons", opt = true },
+		requires = { "nvim-tree/nvim-web-devicons", opt = true },
 	})
 
 	-- Git (try :Gitsigns <function>)
